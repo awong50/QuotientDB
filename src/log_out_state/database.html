@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="styles/database_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fire-flame-simple"></i>&nbsp;QuotientDB</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="database.html" class="navbar__links">Database</a>
+          </li>
+          
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__links">About</a>
+          </li>
+          <li class="navbar__btn"><a href="regform.html" class="button">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main section-->
+    <div class="main"> 
+      <div class="main__container"> 
+          <h1>Database</h1>
+          <div class="dropdown"> 
+              <button onclick="myFunctiona()" id="dropbtn-a" class="dropbtn">Mathematics</button>
+              <div id="a" class="dropdown-content">
+                  <a href="documents/high.html" >High School Mathematics</a>
+                  <a href="documents/oly.html" >Olympiad Algebra and Geometry</a>
+                  <a href="documents/calculus.html" >Calculus</a>
+              </div>
+          </div>
+          <div class="dropdown"> 
+              <button onclick="myFunctionb()" id="dropbtn-b" class="dropbtn">Biology</button>
+              <div id="b" class="dropdown-content">
+                  <a href="documents/anatomy.html" >Anatomy</a>
+                  <a href="documents/ecology.html" >Ecology</a>
+                  <a href="documents/cell.html" >Cell Biology</a>
+              </div>
+          </div>
+          <div class="dropdown"> 
+              <button onclick="myFunctionc()" id="dropbtn-c" class="dropbtn">Chemistry</button>
+              <div id="c" class="dropdown-content">
+                  <a href="documents/structural.html" >Structural Chemistry</a>
+                  <a href="documents/nuclear.html" >Nuclear Chemistry</a>
+                  <a href="documents/electro.html" >Electrochemistry</a>
+              </div>
+          </div>
+          <div class="dropdown"> 
+              <button onclick="myFunctiond()" id="dropbtn-d" class="dropbtn">Physics</button>
+              <div id="d" class="dropdown-content">
+                  <a href="documents/kinematics.html" >Kinematics</a>
+                  <a href="documents/electromagnetism.html" >Electromagnetism</a>
+                  <a href="documents/thermo.html" >Thermodynamics</a>
+              </div>
+          </div>
+          <div class="dropdown"> 
+              <button onclick="myFunctione()" id="dropbtn-e" class="dropbtn">Computer Science</button>
+              <div id="e" class="dropdown-content">
+                  <a href="documents/planguages.html" >Programming Languages</a>
+                  <a href="documents/network.html" >Computer Networks</a>
+                  <a href="documents/csec.html" >Cybersecurity</a>
+                  <a href="documents/softdev.html" >Software Development</a>
+                  <a href="documents/compete.html" >Competitive Programming</a>
+              </div>
+          </div>
+          <div class="dropdown"> 
+              <button onclick="myFunctionf()" id="dropbtn-f" class="dropbtn">Engineering</button>
+              <div id="f" class="dropdown-content">
+                  <a href="documents/mech.html" >Mechanical Engineering</a>
+                  <a href="documents/chem.html" >Chemical Engineering</a>
+                  <a href="documents/civil.html" >Civil Engineering</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="scripts/database.js"></script>
+</body>
+</html>

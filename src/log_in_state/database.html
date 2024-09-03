@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="styles/database_styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Signed in version, sidebar-->
+    <div class="sidebar active">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">QuotientDB</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+
+        <!-- Fixed content -->
+        <ul class="nav_list">
+            <li>
+                <a href="workspace.html">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">Workspace</span>
+                </a>
+                <span class="tooltip">Workspace</span>
+            </li>
+            <li>
+                <a href="database.html">
+                    <i class='bx bx-heart'></i>
+                    <span class="links_name">Database</span>
+                </a>
+                <span class="tooltip">Database</span>
+            </li>
+            <li>
+                <a href="forums.html">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Forums</span>
+                </a>
+                <span class="tooltip">Forums</span>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+
+        <!-- Scrollable content -->
+        <div class="content">
+            <div class="user">
+             <div class="user_details">
+               <img id="profile-picture" decoding="async" src="images/default_profile_picture.png" alt="Profile Picture">
+               <div class="name_job">
+                   <div class="name" id="user-details-name">Default Name</div>
+               </div>
+           </div>
+              <button id="log_out" onclick="window.location.href='../log_out_state/index.html'">
+               <i class='bx bx-log-out'></i>
+             </button>
+            </div>
+          </div>
+        </div>
+    
+    <!-- Main section-->
+    <div class="main"> 
+        <div class="main__container"> 
+            <h1>Database</h1>
+            <div class="dropdown"> 
+                <button onclick="myFunctiona()" id="dropbtn-a" class="dropbtn">Mathematics</button>
+                <div id="a" class="dropdown-content">
+                    <a href="documents/high.html" >High School Mathematics</a>
+                    <a href="documents/oly.html" >Olympiad Algebra and Geometry</a>
+                    <a href="documents/calculus.html" >Calculus</a>
+                </div>
+            </div>
+            <div class="dropdown"> 
+                <button onclick="myFunctionb()" id="dropbtn-b" class="dropbtn">Biology</button>
+                <div id="b" class="dropdown-content">
+                    <a href="documents/anatomy.html" >Anatomy</a>
+                    <a href="documents/ecology.html" >Ecology</a>
+                    <a href="documents/cell.html" >Cell Biology</a>
+                </div>
+            </div>
+            <div class="dropdown"> 
+                <button onclick="myFunctionc()" id="dropbtn-c" class="dropbtn">Chemistry</button>
+                <div id="c" class="dropdown-content">
+                    <a href="documents/structural.html" >Structural Chemistry</a>
+                    <a href="documents/nuclear.html" >Nuclear Chemistry</a>
+                    <a href="documents/electro.html" >Electrochemistry</a>
+                </div>
+            </div>
+            <div class="dropdown"> 
+                <button onclick="myFunctiond()" id="dropbtn-d" class="dropbtn">Physics</button>
+                <div id="d" class="dropdown-content">
+                    <a href="documents/kinematics.html" >Kinematics</a>
+                    <a href="documents/electromagnetism.html" >Electromagnetism</a>
+                    <a href="documents/thermo.html" >Thermodynamics</a>
+                </div>
+            </div>
+            <div class="dropdown"> 
+                <button onclick="myFunctione()" id="dropbtn-e" class="dropbtn">Computer Science</button>
+                <div id="e" class="dropdown-content">
+                    <a href="documents/planguages.html" >Programming Languages</a>
+                    <a href="documents/network.html" >Computer Networks</a>
+                    <a href="documents/csec.html" >Cybersecurity</a>
+                    <a href="documents/softdev.html" >Software Development</a>
+                    <a href="documents/compete.html" >Competitive Programming</a>
+                </div>
+            </div>
+            <div class="dropdown"> 
+                <button onclick="myFunctionf()" id="dropbtn-f" class="dropbtn">Engineering</button>
+                <div id="f" class="dropdown-content">
+                    <a href="documents/mech.html" >Mechanical Engineering</a>
+                    <a href="documents/chem.html" >Chemical Engineering</a>
+                    <a href="documents/civil.html" >Civil Engineering</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/database.js"></script>      
+</body>
+</html>

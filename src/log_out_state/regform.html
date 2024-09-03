@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regform</title>
+  <link rel="stylesheet" href="styles/regform.css">
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fire-flame-simple"></i>&nbsp;QuotientDB</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+      </div>  
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="database.html" class="navbar__links">Database</a>
+        </li>
+        
+        <li class="navbar__item">
+          <a href="about.html" class="navbar__links">About</a>
+        </li>
+        <li class="navbar__btn"><a href="regform.html" class="button">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Error Message Bar -->
+  <div id="error-bar" class="error-bar"></div>
+
+  <div class="body">
+    <div class="wrapper">
+      <div class="form-wrapper sign-in">
+        <form onsubmit="return validateLogin()">
+          <h2>Login</h2>
+          <div class="input-group">
+            <input type="text" id="login-username" required>
+            <label for="">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" required>
+            <label for="">Password</label>
+          </div>
+          <div id="login-error-message" class="error-message"></div>
+          <div class="remember">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+          <button type="submit">Login</button>
+          <div class="signUp-link">
+            <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="form-wrapper sign-up">
+        <form onsubmit="handleSignUp(event)">
+          <h2>Sign Up</h2>
+          <div class="input-group">
+            <input type="text" required>
+            <label for="">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" required>
+            <label for="">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-password" required>
+            <label for="">Password</label>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox" id="terms-checkbox"> I agree to the terms & conditions</label>
+          </div>
+          <div id="terms-error-message" class="error-message"></div> 
+          <button type="submit">Sign Up</button>
+          <div class="signUp-link">
+            <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/regform.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Programming</title>
+    <link rel="stylesheet" href="styles/dataIn.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!--Sidebar-->
+  <div class="sidebar active">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">DABASE</div>
+      </div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav_list">
+     <li>
+       <a href="../workspace.html">
+        <i class='bx bx-folder'></i>
+        <span class="links_name">Workspace</span>
+       </a>
+       <span class="tooltip">Workspace</span>
+     </li>
+     <li>
+       <a href="../database.html">
+        <i class='bx bx-heart'></i>
+        <span class="links_name">Database</span>
+       </a>
+       <span class="tooltip">Database</span>
+     </li>
+     <li>
+       <a href="../forums.html">
+        <i class='bx bx-chat'></i>
+        <span class="links_name">Forums</span>
+       </a>
+       <span class="tooltip">Forums</span>
+     </li>
+     <li>
+       <a href="../settings.html">
+        <i class='bx bx-cog'></i>
+        <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+    </ul>
+      <div class="content">
+        <div class="user">
+         <div class="user_details">
+           <img id="profile-picture" decoding="async" src="images/default_profile_picture.png" alt="Profile Picture">
+           <div class="name_job">
+               <div class="name" id="user-details-name">Default Name</div>
+           </div>
+       </div>
+          <button id="log_out" onclick="window.location.href='../log_out_state/index.html'">
+           <i class='bx bx-log-out'></i>
+         </button>
+        </div>
+      </div>
+    </div>
+    <!--Main content-->
+    <div class="main">
+        <div class="main__container">
+          <h1>Competitive Programming</h1>
+          <div class="row">
+            <div class="column">
+              <h2>Resources</h2>
+              <br>
+              <div class="result_container">
+                <a href="https://usaco.guide" class="resource_button" target="_blank">USACO Guide</a>
+                <br>
+                <a href="https://codeforces.com/" class="resource_button" target="_blank">Codeforces</a>
+                <br>
+                <a href="https://atcoder.jp/" class="resource_button" target="_blank">AtCoder</a>
+              </div>
+            </div>
+
+            <div class="column"> 
+              
+              <button id="openPopUpBtn"><h2>Suggest a resource!</h2></button>
+              <div id = "pop" class ="pop_up"> 
+
+                <div class="pop_up-content">
+                  <span class="close-btn">&times;</span>
+
+                  <form id="suggestion">
+                    <label for="name">Resource name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+    
+                    <label for="resource">Resource link:</label>
+                    <input type="text" id="resource" name="resource" required>
+                    <br><br>
+    
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" required>
+                    <br><br>
+    
+                    <input type="submit" value="Submit">
+                </form>
+                
+                <div id="message"></div>
+
+                </div>
+              </div>
+
+              <div class="result_container">
+                <div id="results"></div>
+              </div>
+
+            </div>      
+          </div>
+            
+        </div>
+    </div>
+    <script src="scripts/dataIn.js"></script>    
+</body>
+</html>

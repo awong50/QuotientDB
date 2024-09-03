@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles/settings_styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar active">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">QuotientDB</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="workspace.html">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">Workspace</span>
+                </a>
+                <span class="tooltip">Workspace</span>
+            </li>
+            <li>
+                <a href="database.html">
+                    <i class='bx bx-heart'></i>
+                    <span class="links_name">Database</span>
+                </a>
+                <span class="tooltip">Database</span>
+            </li>
+            <li>
+                <a href="forums.html">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Forums</span>
+                </a>
+                <span class="tooltip">Forums</span>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="user">
+                <div class="user_details">
+                    <img decoding="async" src="images/default_profile_picture.png" alt="">
+                    <div class="name_job">
+                        <div class="name" span id="user-details-name">Default Name</div>
+                    </div>
+                </div>
+                <button id="log_out" onclick="window.location.href='../log_out_state/index.html'">
+                    <i class='bx bx-log-out'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        <div class="text">Settings</div>
+        <div class="settings_container">
+            <div id="success-notification" class="success-notification"></div>
+            
+            <!-- Profile Picture Section -->
+            <form id="profile-form">
+                <div class="form_group">
+                    <label for="profile_picture">Profile Picture</label>
+                    <input type="file" id="profile_picture" name="profile_picture">
+                </div>
+            </form>
+            
+            
+            <!-- Username Section -->
+            <form id="username-form">
+                <div class="form_group">
+                    <label for="username">Change Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your new username">
+                </div>
+            </form>
+
+            <form id="email-form">
+                <div class="form_group">
+                    <label for="email">Change Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your new email">
+                </div>
+            </form>
+
+            <!-- Password Section -->
+            <form id="password-form">
+                <div class="form_group">
+                    <label for="current_password">Current Password</label>
+                    <input type="password" id="current_password" name="current_password" placeholder="Enter your current password">
+                </div>
+                <div class="form_group">
+                    <label for="new_password">New Password</label>
+                    <input type="password" id="new_password" name="new_password" placeholder="Enter your new password">
+                </div>
+                <div class="form_group">
+                    <label for="confirm_password">Confirm New Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your new password">
+                </div>
+            </form>
+
+            <!-- Save Changes Button -->
+            <div class="form_group">
+                <button id="saveButton" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

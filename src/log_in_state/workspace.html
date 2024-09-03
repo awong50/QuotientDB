@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Workspace </title>
+    <link rel="stylesheet" href="styles/workspace_styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+   <div class="sidebar active">
+     <div class="logo_content">
+       <div class="logo">
+         <div class="logo_name">QuotientDB</div>
+       </div>
+       <i class='bx bx-menu' id="btn"></i>
+     </div>
+     <ul class="nav_list">
+      <li id="workspace-tab">
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Workspace</span>
+          <i class='bx bx-chevron-down dropdown-btn'></i>
+        </a>
+        <span class="tooltip">Workspace</span>
+        <ul id="workspace-dropdown" class="dropdown-content"></ul>
+      </li>
+      <li>
+        <a href="database.html">
+         <i class='bx bx-heart'></i>
+         <span class="links_name">Database</span>
+        </a>
+        <span class="tooltip">Database</span>
+      </li>
+      <li>
+        <a href="forums.html">
+         <i class='bx bx-chat'></i>
+         <span class="links_name">Forums</span>
+        </a>
+        <span class="tooltip">Forums</span>
+      </li>
+      <li>
+        <a href="settings.html">
+         <i class='bx bx-cog'></i>
+         <span class="links_name">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+     </ul>
+     <div class="content">
+       <div class="user">
+        <div class="user_details">
+          <img id="profile-picture" decoding="async" src="images/default_profile_picture.png" alt="Profile Picture">
+          <div class="name_job">
+              <div class="name" id="user-details-name">Default Name</div>
+          </div>
+      </div>
+         <button id="log_out" onclick="window.location.href='../log_out_state/index.html'">
+          <i class='bx bx-log-out'></i>
+        </button>
+       </div>
+     </div>
+   </div>
+   <div class="home_content">
+     <div class="text">Workspace</div>
+     <div class="workspace-container">
+        <button id="create-workspace-btn">Create New Workspace</button>
+        <div id="workspaces"></div>
+      </div>
+      
+      <!-- Modal for Creating Workspace -->
+      <div id="workspace-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Create New Workspace</h2>
+          <form id="workspace-form">
+            <label for="workspace-name">Name:</label>
+            <input type="text" id="workspace-name" name="workspace-name" required>
+            <label for="workspace-desc">Description:</label>
+            <textarea id="workspace-desc" name="workspace-desc" required></textarea>
+            
+            <label for="workspace-tags">Tags:</label>
+            <div id="workspace-tags" class="tags-container">
+                <label class="tag-label">
+                    <input type="checkbox" name="workspace-tags" value="stem">
+                    <span class="custom-checkbox"></span> STEM
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="workspace-tags" value="humanities">
+                    <span class="custom-checkbox"></span> Humanities
+                </label>
+                <label class="tag-label">
+                    <input type="checkbox" name="workspace-tags" value="general">
+                    <span class="custom-checkbox"></span> General
+                </label>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+      </div>
+      
+      <div id="workspace-view" class="workspace-view">
+        <div id="workspace-view" class="workspace-view">
+          <!-- Content added dynamically in JavaScript -->
+        </div>
+        <button id="return-btn">Return</button>
+      </div>
+
+      
+      
+   </div>
+<script src="scripts/workspace.js"></script>
+</body>
+</html>

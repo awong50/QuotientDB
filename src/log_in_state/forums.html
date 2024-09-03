@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Forums </title>
+    <link rel="stylesheet" href="styles/forums_styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="sidebar active">
+      <div class="logo_content">
+        <div class="logo">
+          <div class="logo_name">QuotientDB</div>
+        </div>
+        <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="workspace.html">
+            <i class='bx bx-folder'></i>
+            <span class="links_name">Workspace</span>
+          </a>
+          <span class="tooltip">Workspace</span>
+        </li>
+        <li>
+          <a href="database.html">
+            <i class='bx bx-heart'></i>
+            <span class="links_name">Database</span>
+          </a>
+          <span class="tooltip">Database</span>
+        </li>
+        <li>
+          <a href="forums.html">
+            <i class='bx bx-chat'></i>
+            <span class="links_name">Forums</span>
+          </a>
+          <span class="tooltip">Forums</span>
+        </li>
+        <li>
+          <a href="settings.html">
+            <i class='bx bx-cog'></i>
+            <span class="links_name">Settings</span>
+          </a>
+          <span class="tooltip">Settings</span>
+        </li>
+      </ul>
+      <div class="content">
+        <div class="user">
+          <div class="user_details">
+            <img id="profile-picture" decoding="async" src="images/default_profile_picture.png" alt="Profile Picture">
+            <div class="name_job">
+              <div class="name" id="user-details-name">Default Name</div>
+            </div>
+          </div>
+          <button id="log_out" onclick="window.location.href='../log_out_state/index.html'">
+            <i class='bx bx-log-out'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="home_content">
+      <div class="text">Forums</div>
+
+      <!-- Forum Section -->
+      <div class="forum_container">
+        <button id="createPostButton">Create Post</button>
+        <div id="postCreationBox" class="post_creation_box hidden">
+          <form id="postForm">
+            <div class="form_group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject">
+            </div>
+            <div class="form_group">
+              <label>Tags</label>
+              <div id="tags">
+                <label><input type="checkbox" value="General"> General</label>
+                <label><input type="checkbox" value="STEM"> STEM</label>
+                <label><input type="checkbox" value="Huamnities"> Huamnities</label>
+              </div>
+            </div>
+            <div class="form_group">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" rows="10"></textarea>
+            </div>
+            <button id="postButton" type="button" disabled>Post</button>
+          </form>
+        </div>
+
+        <div class="forum_layout">
+          <div id="postsContainer" class="posts_container"></div>
+          <div id="postDetails" class="post_details hidden"></div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter_section">
+          <label for="filterTags">Filter by Tags:</label>
+          <select id="filterTags">
+            <option value="">All</option>
+            <option value="General">General</option>
+            <option value="STEM">STEM</option>
+            <option value="Huamnities">Huamnities</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/forums.js"></script>
+  </body>
+</html>
