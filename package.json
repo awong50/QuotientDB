@@ -1,9 +1,9 @@
 {
-  "name": "dabase",
-  "productName": "dabase",
+  "name": "quotientdb",
+  "productName": "QuotientDB",
   "version": "1.0.0",
-  "description": "My Electron application description",
-  "main": "src/log_out_state/index.js",
+  "description": "A multifunctional database",
+  "main": "src/electron/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
