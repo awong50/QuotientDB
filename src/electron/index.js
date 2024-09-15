@@ -10,12 +10,10 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 2400,
     height: 1800,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-    },
   });
+  mainWindow.setMenuBarVisibility(false)
 
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, '../web/log_out_state/index.html'));
 };
 
 app.whenReady().then(() => {
