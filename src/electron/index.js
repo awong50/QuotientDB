@@ -13,7 +13,7 @@ const createWindow = () => {
   });
   mainWindow.setMenuBarVisibility(false)
 
-  mainWindow.loadFile(path.join(__dirname, '../web/log_out_state/index.html'));
+  mainWindow.loadFile(path.join(__dirname, '../web/index.html'));
 };
 
 app.whenReady().then(() => {
