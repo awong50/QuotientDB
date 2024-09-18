@@ -28,7 +28,7 @@ function validateLogin() {
         }));
 
         errorMessage.textContent = ""; 
-        window.location.href = "../../web/log_in_state/workspace.html";
+        window.location.href = "../../log_in_state/workspace.html";
         return true;
     } else {
         errorMessage.textContent = "Invalid username or password!";
